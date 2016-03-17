@@ -31,7 +31,8 @@ TERMS OF USE - 2d-guillotine-cutter
 
 Open source under the BSD License.
 
-Copyright 2016 Mario López Lnades
+Copyright 2016 Mario López Landes
+
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without modification,
