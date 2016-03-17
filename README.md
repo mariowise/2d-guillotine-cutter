@@ -14,6 +14,8 @@ working.
     $ npm install -g live-server
     $ live-server .
 
+![alt tag](https://raw.github.com/mariowise/2d-guillotine-cutter/master/img/screenshot.png)
+
 Todo
 ---
 
