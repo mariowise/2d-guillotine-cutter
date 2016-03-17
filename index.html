@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Guillotine cut test 01</title>
+	
+	<script src="js/lib/two.js/build/two.min.js"></script>
+	<script src="js/uuid.js"></script>
+	<script src="js/tree.js"></script>
+
+	<style>
+		#sheet {
+			background-color: #ddd;
+			margin: 100px;
+			width: 2500px;
+			height: 1850px;
+
+		}
+	</style>
+</head>
+<body>
+	
+	<div id="sheet"></div>
+
+	<script>
+    var two = new Two({
+      width: 2500, height: 1850,
+      autostart: true
+    })
+    .appendTo(document.getElementById("sheet"));
+
+    var pieces = [
+    	{ w: 500, h: 300 },
+    	{ w: 500, h: 300 },
+    	{ w: 500, h: 300 },
+    	{ w: 500, h: 300 },
+    	{ w: 500, h: 300 },
+    	{ w: 500, h: 300 },
+    	{ w: 500, h: 300 },
+    	{ w: 500, h: 300 },
+    	{ w: 500, h: 300 },
+    	{ w: 500, h: 300 },
+    	{ w: 500, h: 300 },
+    	{ w: 500, h: 300 },
+    	{ w: 500, h: 300 },
+    	{ w: 500, h: 300 },
+    	{ w: 500, h: 300 },
+    	{ w: 500, h: 300 },
+    	{ w: 500, h: 300 },
+    	{ w: 500, h: 300 },
+    	{ w: 500, h: 300 },
+    	{ w: 500, h: 300 },
+    	{ w: 500, h: 300 },
+    	{ w: 350, h: 120 },
+    	{ w: 350, h: 120 },
+    	{ w: 350, h: 120 },
+    	{ w: 350, h: 120 },
+    	{ w: 350, h: 120 },
+    	{ w: 350, h: 120 },
+    	{ w: 350, h: 120 },
+    	{ w: 350, h: 300 },
+    	{ w: 350, h: 300 },
+    	{ w: 350, h: 300 },
+    	{ w: 350, h: 300 },
+    	{ w: 350, h: 140 }
+    ]
+
+    var tree = new Node(2500, 1850)
+
+    pieces.forEach(function (piece) {
+    	if(!Node.try_push(piece)) {
+    		console.log("Pieza no cupo")
+    		console.log(piece)
+    	}
+    })
+
+    tree.draw({ x: tree.w / 2, y: tree.h / 2 })
+    
+  </script>
+</body>
+</html>
